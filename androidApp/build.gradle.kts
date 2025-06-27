@@ -43,13 +43,32 @@ android {
         }
     }
 
+    signingConfigs {
+        getByName("debug") {
+            storeFile = file(System.getProperty("user.home") + "/.android/debug.keystore")
+            storePassword = "android"
+            keyAlias = "androiddebugkey"
+            keyPassword = "android"
+        }
+        create("release") {
+            storeFile = file(System.getProperty("user.home") + "/.android/release.keystore")
+            storePassword = "android"
+            keyAlias = "androidreleasekey"
+            keyPassword = "android"
+        }
+    }
+
     buildTypes {
+        debug {
+            signingConfig = signingConfigs.getByName("debug")
+        }
         release {
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            signingConfig = signingConfigs.getByName("release")
         }
     }
     compileOptions {
