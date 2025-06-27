@@ -1,0 +1,59 @@
+# Gradle
+.gradle/
+build/
+gradle-app.setting
+!gradle-wrapper.jar
+!gradle-wrapper.properties
+
+# Android
+*.apk
+*.aar
+*.dex
+*.ap_
+bin/
+gen/
+out/
+release/
+local.properties
+proguard/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Android Studio
+captures/
+.externalNativeBuild
+.cxx/
+
+# Keystore files
+*.jks
+*.keystore
+
+# Mac
+.DS_Store
+
+# Logs
+*.log
+
+# Kotlin
+*.hprof
+
+# Node.js (for potential web module)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Temporary files
+*.tmp
+*.temp
+*~
+
+# OS generated files
+Thumbs.db
+
+# KMP
+.kotlin/
